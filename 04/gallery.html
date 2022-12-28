@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="galleryWrap">
+        <h1>이미지갤러리</h1>
+        <p>
+            <a href="#" onclick="prevGallery()">◀</a>
+            <img src="img/img1.jpg" width="300" height="200" id="gallery">
+            <a href="#" onclick="nextGallery()">▶</a>
+        </p>
+    </div>
+    <script>
+        let num = 1;
+        
+        function nextGallery() {
+          num++;
+          if(num >=7){
+            num=1
+          }
+          document.getElementById("gallery").src="img/img" +num + ".jpg";
+          return false;
+        }
+
+        function prevGallery(){
+            num--;
+            console.log(num);
+            if (num <= 0) { num = 7}
+            document.getElementById("gallery").src = "img/img" + num + ".jpg";
+            return false;
+    }
+
+        // 전역변수 let num = 1;을 function에 선언하면 내부에만 적용
+        //function nextGallery() {
+        //    let num = 1;
+        //  num++;
+        //  if(num >=7){
+        //    num=1
+        //  }
+        //  document.getElementById("gallery").src="img/img" +num + ".jpg";
+        //}
+      </script>
+    </body>
+</body>
+</html>
