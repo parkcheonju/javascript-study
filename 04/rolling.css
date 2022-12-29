@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  /* img 72px 여백8px = 총합80px */
+  #frame {
+    width: 232px;
+    height: 88px;
+    position: relative;
+    margin: 10px auto;
+    border: 1px solid blue;
+    overflow: hidden;
+  }
+  #banner {
+    width: 500px;
+    height: 54px;
+    display: flex;
+  }
+  #banner li {
+    flex: 0 0 78px;
+    list-style: none;
+    width: 78px;
+    height: 100%;
+    background-color: gray;
+    font-size: 2em;
+    margin-right: 1px;
+  }
