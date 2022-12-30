@@ -17,3 +17,17 @@ for(let j=1; j<=9; j++){
   let result="<br>"+i+"x"+j+"="+ i*j+"<br>";
   document.write(result)
 }
+// 2의 배수?
+var k;
+var n = 10;
+var sum = 0;
+//3<= 10  //k(3)=k(1)+1
+for (k = 1; k <= n; k++) {
+	if (k % 2 === 1) {
+		continue; //통과
+	}
+	console.log(k); //1,2,3,~10
+  //sum=sum+k;
+  sum+=k;
+  document.write("<hr>"+sum);
+}
