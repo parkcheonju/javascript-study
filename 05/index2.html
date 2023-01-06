@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="change">글자색</button>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis unde veritatis iure mollitia! Omnis in sunt nisi nostrum dolore voluptate ullam esse at eum nemo perspiciatis, ipsam inventore fugit cum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit veritatis, saepe ipsam
+      eos enim qui aperiam iste voluptas quo cum? Sapiente inventore dolore consectetur illum dignissimos a at expedita tenetur.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quo doloribus earum consequuntur nostrum aliquid doloremque adipisci soluta, amet ratione ducimus expedita exercitationem, facere sunt impedit. Pariatur iusto nesciunt facere.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit accusamus aut odio adipisci, similique, reprehenderit recusandae magni animi asperiores quisquam sunt a culpa distinctio fuga dolore quos vel quibusdam expedita.</p>
+    <ul>
+        <li><a href="#" onclick="changeBg('green')">Green</a></li>
+        <li><a href="#" onclick="changeBg('orange')">Orange</a></li>
+        <li><a href="#" onclick="changeBg('purple')">Purple</a></li>
+    </ul>
+    <script>
+      //방법1:변수로 지정 후 함수호출
+      //var changeBtn=document.querySelector("#change");
+      //이벤트핸들러로 함수 호출시 () 안함
+      //changeBtn.onclick=changeColor;
+      function changeColor() {
+        document.querySelector("p").style.color = "#f00";
+      }
+      //방법2:바로변경
+      //document.querySelector("#change").onclick=changeColor;
+      //방법3:직접 함수선언
+      document.querySelector("#change").onclick = function () {
+        document.querySelectorAll("p")[1].style.color = "#f00";
+      };
+    </script>
+    <script>
+        function changeBg(color){
+            var result=document.querySelector('body');
+            result.style.backgroundColor=color;
+        }
+    </script>
+  </body>
+</html>

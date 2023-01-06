@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialised;
+}
+
+/*===============  tab-wrapper ===================*/
+.tab-wrapper {
+    width: 960px;
+    margin: auto;
+}
+
+.tab-menu {
+    padding-left: 0;
+    display: flex;
+}
+
+.tab-menu li {
+    list-style: none;
+    background: #ebebeb;
+    margin-right: 10px;
+}
+
+.tab-menu li a {
+    color: #999;
+    line-height: 27px;
+    display: block;
+    height: 27px;
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+.tab-menu li a.active {
+    background: #000;
+    color: #fff;
+}
+
+/*===============  tab-content ===================*/
+
+.tab-content {
+    position: relative;
+    min-height: 300px;
+}
+
+.tab-content>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
