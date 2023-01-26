@@ -26,7 +26,6 @@ addEventListener("DOMContentLoaded", () => {
       //반환받은 요소중 id 속성을 모두 변수ids에 저장
 
       let ids = response.querySelectorAll("[id]");
-      console.log(ids);
 
       news1.innerHTML = ids[0].innerText;
       news2.innerHTML = ids[1].innerText;
